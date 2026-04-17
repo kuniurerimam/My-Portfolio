@@ -1,0 +1,163 @@
+/* First section code */
+
+/* Class selectors for the first section of the portfolio page. */
+.firstSection {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    background: linear-gradient(180deg, #000000, #030833, #1c2257);
+    height: 500px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.navcontent{
+  display: inline-flex;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+  width: fit-content;
+  color: #030833;
+}
+
+.introText {
+    color: #d9d9d9;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    height: 120px;
+    padding: 200px 100px;
+}
+
+.portfolioText {
+    font-size: 24px;
+    font-weight: bold;
+    width: fit-content;
+}
+
+/* id selector for the first section of the portfolio page. */
+#introTextParagragh {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+#Navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #d9d9d9;
+   display: grid;
+   grid-template-columns: 40% 20% 20% 20%;
+}
+
+#greeting {
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+/* tag selector for the first section of the portfolio page. */
+h1 {
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+   background-color: #d9d9d9;
+}
+
+p{
+    margin: 0px;
+}
+
+div>img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin: 0px;
+}
+
+p>img {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    margin: 0px 10px;
+}
+
+nav div {
+    display: inline-block;
+    margin: 0px 10px;
+    height: fit-content;
+    color: #030833;
+}
+
+
+/*Second section code */
+
+#secondSection {
+    background: linear-gradient(180deg, #1c2257, #030833) ;
+    height: 500px;
+    text-align: center;
+
+}
+
+#secondSection>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#secondcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#secondcontainer>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills{
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    height: 350px;
+}
+
+div>h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: #d9d9d9;
+}
+
+
+
+
+
+/* third section code */
+#thirdSection {
+    background: linear-gradient(180deg, #030833, #1c2257);
+    border-bottom: 2px solid #ccc;
+    height: 500px;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+}
+
+#thirdSection>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #d9d9d9;
+}
+
