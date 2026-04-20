@@ -112,9 +112,13 @@ nav div {
 
 #secondcontainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(1,auto);
     gap: 20px;
+    justify-content: center;
     padding: 20px;
+    width: 100%;
+    height: 350px;
 }
 
 #secondcontainer>div {
@@ -123,11 +127,70 @@ nav div {
     justify-content: center;
     align-items: center;
 }
+/* 
+@media (max-width:480px) {
+    #secondcontainer>div{
+         display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        width: 30%;
+        font-size: 30%;
+    }
+}
+
+
+@media (max-width:834px){
+     #secondcontainer>div{
+         display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        width: 30%;
+        font-size: 30%;
+    }
+}
+
+@media (max-width: 1440px){
+     #secondcontainer>div{
+         display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        width: 30%;
+        font-size: 30%;
+    }
+} */
 
 .skills{
     background-color: #d9d9d9;
     border-radius: 10px;
-    height: 350px;
+    height: 100%;
+}
+
+@media (max-width: 480px){
+    .skills{
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    height: 50%;
+}
+}
+
+@media (min-width: 480px) and (max-width: 834px){
+    .skills{
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    height: 70%;
+}
+}
+
+
+.skills>h3{
+    font-size: 100%;
+}
+
+.skills>p{
+    font-size: 80%;
 }
 
 div>h2 {
