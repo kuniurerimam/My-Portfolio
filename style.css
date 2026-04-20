@@ -11,12 +11,18 @@
 
 .navcontent{
   display: inline-flex;
-  font-size: 18px;
   text-align: center;
   padding-top: 20px;
   width: fit-content;
-  color: #030833;
+  height: 45%;
+    width: 10%;
 }
+
+.navcontent>a{
+     color: #030833;
+    font-size: 100%;
+}
+
 
 .introText {
     color: #d9d9d9;
@@ -28,9 +34,11 @@
 }
 
 .portfolioText {
-    font-size: 24px;
+    font-size: 100%;
     font-weight: bold;
-    width: fit-content;
+    height: 70%;
+    width: 70%;
+    padding-top: 20px;
 }
 
 /* id selector for the first section of the portfolio page. */
@@ -127,40 +135,7 @@ nav div {
     justify-content: center;
     align-items: center;
 }
-/* 
-@media (max-width:480px) {
-    #secondcontainer>div{
-         display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-        width: 30%;
-        font-size: 30%;
-    }
-}
 
-
-@media (max-width:834px){
-     #secondcontainer>div{
-         display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-        width: 30%;
-        font-size: 30%;
-    }
-}
-
-@media (max-width: 1440px){
-     #secondcontainer>div{
-         display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-        width: 30%;
-        font-size: 30%;
-    }
-} */
 
 .skills{
     background-color: #d9d9d9;
