@@ -1,46 +1,55 @@
+/* Palette variables */
+:root{
+  --ash: #b7b7b7; /* navbar ash */
+  --milk: #dfeaf6; /* former blues -> milk */
+  --deep-blue: #1c2d4d; /* former whites -> deep-blue */
+}
+
 /* First section code */
 
 /* Class selectors for the first section of the portfolio page. */
 .firstSection {
     display: grid;
-    grid-template-rows: 10% 90%;
-    background: linear-gradient(180deg, #000000, #030833, #1c2257);
-    height: 500px;
+    grid-template-rows: auto 1fr;
+    background: linear-gradient(180deg, var(--milk), #9bb5d8, #7c9dc9);
+    min-height: 60vh;
     border-radius: 10px 10px 0px 0px;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .navcontent{
   display: inline-flex;
+  align-items: center;
   text-align: center;
-  padding-top: 20px;
-  width: fit-content;
-  height: 45%;
-    width: 10%;
+  padding-top: 10px;
+  height: auto;
+  width: auto;
 }
 
 .navcontent>a{
-     color: #030833;
-    font-size: 100%;
+     color: var(--deep-blue);
+    font-size: 1rem;
 }
 
 
 .introText {
-    color: #d9d9d9;
-    font-size: 24px;
+    color: var(--deep-blue);
+    font-size: clamp(1rem, 1.6vw, 1.5rem);
     font-weight: bold;
     text-align: center;
-    height: 120px;
-    padding: 200px 100px;
+    padding: 3rem 1rem;
+    height: auto;
+    box-sizing: border-box;
 }
 
 
-
 .portfolioText {
-    font-size: 100%;
+    font-size: 1rem;
     font-weight: bold;
-    height: 70%;
     width: 70%;
-    padding-top: 20px;
+    padding-top: 1rem;
+    margin: 0 auto;
 }
 
 /* id selector for the first section of the portfolio page. */
@@ -62,36 +71,46 @@
     pointer-events: none;
 }
 
+/* navbar */
 #Navbar {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #d9d9d9;
-   display: grid;
-   grid-template-columns: 40% 20% 20% 20%;
+    background-color: var(--ash);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
 }
 
+/* keep greeting style for any uses */
 #greeting {
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: normal;
     margin-top: 0px;
+    color: var(--deep-blue);
 }
 
 /* tag selector for the first section of the portfolio page. */
 h1 {
     margin-bottom: 0px;
+    color: var(--deep-blue);
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 body {
-   background-color: #d9d9d9;
+   background-color: var(--milk);
 }
 
 p{
     margin: 0px;
+    color: var(--deep-blue);
 }
 
 div>img {
@@ -112,17 +131,17 @@ nav div {
     display: inline-block;
     margin: 0px 10px;
     height: fit-content;
-    color: #030833;
+    color: var(--deep-blue);
 }
-
 
 /*Second section code */
 
 #secondSection {
-    background: linear-gradient(180deg, #1c2257, #030833) ;
-    height: 500px;
+    background: linear-gradient(180deg, #7d9cc7, #4d6fa4) ;
+    min-height: 60vh;
     text-align: center;
-    padding-top: 100px;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
 }
 
 #secondSection>div {
@@ -134,13 +153,14 @@ nav div {
 
 #secondcontainer {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: repeat(1,auto);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-content: center;
     padding: 20px;
     width: 100%;
-    height: 350px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 #secondcontainer>div {
@@ -152,59 +172,95 @@ nav div {
 
 
 .skills{
-    background-color: #d9d9d9;
+    background-color: var(--milk);
     border-radius: 10px;
-    height: 100%;
+    padding: 1rem;
+    height: auto;
     opacity: 0;
     pointer-events: none;
 }
 
 @media (max-width: 480px){
     .skills{
-    background-color: #d9d9d9;
+    background-color: var(--milk);
     border-radius: 10px;
-    height: 50%;
+    height: auto;
+    width: 100%;
+}
+
+#secondcontainer {
+  grid-template-columns: 1fr;
+}
+
+#Navbar{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.navcontent{
+  justify-content: center;
+}
+
+.introText {
+  padding: 2rem .75rem;
+}
+
+.portfolioText{
+  width: 95%;
 }
 }
 
-@media (min-width: 480px) and (max-width: 834px){
+@media (min-width: 481px) and (max-width: 834px){
     .skills{
-    background-color: #d9d9d9;
+    background-color: var(--milk);
     border-radius: 10px;
-    height: 70%;
+    height: auto;
+    width: 100%;
+}
+
+#secondcontainer {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+#Navbar{
+  grid-template-columns: 1fr 1fr;
+}
+
+.portfolioText{
+  width: 85%;
 }
 }
 
 
 .skills>h3{
-    font-size: 100%;
+    font-size: 1rem;
 }
 
 .skills>p{
-    font-size: 80%;
+    font-size: 0.9rem;
 }
 
 div>h2 {
-    font-size: 24px;
+    font-size: 1.25rem;
     font-weight: bold;
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    color: #d9d9d9;
+    color: var(--deep-blue);
 }
-
-
-
 
 
 /* third section code */
 #thirdSection {
-    background: linear-gradient(180deg, #030833, #1c2257);
-    border-bottom: 2px solid #ccc;
-    height: 500px;
+    background: linear-gradient(180deg, #4d6fa4, #7d9cc7);
+    border-bottom: 2px solid #cfe0f2;
+    min-height: 60vh;
     border-radius: 0px 0px 10px 10px;
     text-align: center;
-    padding-top: 100px;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
 }
 
 #thirdSection>div {
@@ -213,6 +269,14 @@ div>h2 {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    color: #d9d9d9;
+    color: var(--deep-blue);
 }
 
+/* utility: make images responsive */
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* small refinements */
+.container{max-width:1200px;margin:0 auto;padding:0 1rem;box-sizing:border-box}
